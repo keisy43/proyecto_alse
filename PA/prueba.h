@@ -40,12 +40,18 @@ private slots:
     void on_boton10_clicked();
 
     void on_boton11_clicked();
+    void ventanaaci();
+
+
 
 private:
     Ui::prueba *ui;
     QTimer  *_timer;
     char _estado;
+    char _estado2;
     int conteo=0;
+    int tiempo=0;
+
       QPixmap *rd, *rl;
 };
 

@@ -2,6 +2,7 @@
 #include "ui_menu.h"
 #include "regpc.h"
 #include "prueba.h"
+#include "tiempod.h"
 
 
 menu::menu(QWidget *parent) :
@@ -33,7 +34,7 @@ void menu::on_pushButton_clicked()
 
 void menu::on_prueba_clicked()
 {
-    prueba a(this);
+    tiempod a(this);
     a.setModal(true);
 
      a.show();

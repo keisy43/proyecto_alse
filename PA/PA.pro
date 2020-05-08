@@ -29,21 +29,27 @@ SOURCES += \
     regu.cpp \
     regpc.cpp \
     menu.cpp \
-    prueba.cpp
+    prueba.cpp \
+    tiempod.cpp \
+    aciertos.cpp
 
 HEADERS += \
         usuario.h \
     regu.h \
     regpc.h \
     menu.h \
-    prueba.h
+    prueba.h \
+    tiempod.h \
+    aciertos.h
 
 FORMS += \
         usuario.ui \
     regu.ui \
     regpc.ui \
     menu.ui \
-    prueba.ui
+    prueba.ui \
+    tiempod.ui \
+    aciertos.ui
 
 RESOURCES += \
     resources.qrc

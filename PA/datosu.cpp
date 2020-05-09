@@ -5,7 +5,7 @@ datosu::datosu()
 
 }
 
-string datosu::nombre() const
+string datosu::getnombre() const
 {
     return _nombre;
 }
@@ -15,7 +15,7 @@ void datosu::setNombre(const string &nombre)
     _nombre = nombre;
 }
 
-string datosu::apellido() const
+string datosu::getapellido() const
 {
     return _apellido;
 }
@@ -25,25 +25,9 @@ void datosu::setApellido(const string &apellido)
     _apellido = apellido;
 }
 
-float datosu::docident() const
-{
-    return _docident;
-}
 
-void datosu::setDocident(float docident)
-{
-    _docident = docident;
-}
 
-string datosu::getDireccion() const
-{
-    return direccion;
-}
 
-void datosu::setDireccion(const string &value)
-{
-    direccion = value;
-}
 
 string datosu::getFechan() const
 {
@@ -73,4 +57,14 @@ string datosu::getContra() const
 void datosu::setContra(const string &contra)
 {
     _contra = contra;
+}
+
+string datosu::getDocident() const
+{
+    return _docident;
+}
+
+void datosu::setDocident(const string &docident)
+{
+    _docident = docident;
 }

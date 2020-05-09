@@ -24,7 +24,7 @@ void regu::on_buttonBox_accepted()
    _db.cargarusuario(_dato);
    ui->nombre->setText(QString( _dato.getnombre().c_str() )  );
    ui->apellido->setText(QString(_dato.getapellido().c_str()));
-   ui->docident->setText(QString(_dato.getdocident().c_str()));
+   ui->docident->setText(QString(_dato.getDocident().c_str()));
   ui->fechan->setText(QString(_dato.getFechan().c_str()));
   ui->_nickname->setText(QString(_dato.getUser().c_str()));
   ui->contra->setText(QString(_dato.getContra().c_str() ));

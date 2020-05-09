@@ -12,8 +12,6 @@ public:
     string getapellido() const;
     void setApellido(const string &apellido);
 
-    string getdocident() const;
-    void setDocident(const string docident);
 
     string getDireccion() const;
     void setDireccion(const string &value);
@@ -26,6 +24,9 @@ public:
 
     string getContra() const;
     void setContra(const string &contra);
+
+    string getDocident() const;
+    void setDocident(const string &docident);
 
 private:
 

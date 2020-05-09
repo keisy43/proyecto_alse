@@ -4,14 +4,15 @@
 #include <sstream>
 
 using namespace std;
-db_local::db_local()
-{
-}
+
     /**
      * @brief db_local::abrirDB
      * @param path  Es la ubicación absoluta o relativa de la DB.
      * @return Un valor boleano que describe si pudo abrir la DB o no.
      */
+db_local::db_local()
+{
+}
     bool db_local::abrirDB( string path ){
         int rc;
 
@@ -28,17 +29,15 @@ db_local::db_local()
 
 
 }
-    bool cargarusuario( datosu &a ){
-         sqlite3 *db;
-
+    bool db_local::cargarusuario( datosu &a ){
         char *zErrMsg = 0;
         int rc;
 
-        stringstream sql;
-        sql << "SELECT * FROM _datos_usuario WHERE ( Nombre = " << a.getnombre()<< " );";
+        std::stringstream sql;
+       sql <<"SElECT * FROM _datos_usuario WHERE id_usuario=(SELECT MAX(Id_usuario) FROM DATOS);";
 
         /* Execute SQL statement */
-        rc=sqlite3_exec(db, sql.str().cstr(),agregarusuario,(void*)&a, &zErrMsg);
+        rc = sqlite3_exec(db, sql.str().c_str(),agregarusuario , (void*)&a, &zErrMsg);
 
         if( rc != SQLITE_OK ){
            fprintf(stderr, "SQL error: %s\n", zErrMsg);
@@ -49,11 +48,10 @@ db_local::db_local()
         }
         return true;
         }
-
-        bool db_local::cerrarDB(){
+    bool db_local::cerrarDB(){
             sqlite3_close( db );
         }
-       int agregarusuario(void *data, int argc, char **argv, char **azColName){
+    int db_local::agregarusuario(void *data, int argc, char **argv, char **azColName){
             datosu* a = (datosu *) data;
             a->setNombre(argv[1]);
             a->setApellido(argv[2]);

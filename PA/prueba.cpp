@@ -185,7 +185,7 @@ void prueba::cambio_estado(void){
             ui->boton11->setIcon(*rd );
             _timer->setInterval( 1000 );
             _timer->start();
-             ui->buttonBox->setEnabled(false);
+
 
             break;
         case 7:
@@ -207,7 +207,7 @@ void prueba::cambio_estado(void){
 
             _timer->setInterval( 1000 );
             _timer->start();
-         ui->buttonBox->setEnabled(false);
+
             break;
         case 8:
             _estado2 = 8;
@@ -229,7 +229,7 @@ void prueba::cambio_estado(void){
 
             _timer->setInterval( 1000 );
             _timer->start();
-             ui->buttonBox->setEnabled(false);
+
 
             break;
         case 9:
@@ -252,7 +252,7 @@ void prueba::cambio_estado(void){
 
             _timer->setInterval( 1000 );
             _timer->start();
-             ui->buttonBox->setEnabled(false);
+
 
             break;
         case 10:
@@ -274,7 +274,7 @@ void prueba::cambio_estado(void){
 
             _timer->setInterval( 1000 );
             _timer->start();
-             ui->buttonBox->setEnabled(false);
+
 
             break;
         case 11:
@@ -296,7 +296,7 @@ void prueba::cambio_estado(void){
             _timer->setInterval( 1000 );
             _timer->start();
 
-            ui->buttonBox->setEnabled(true);
+
             break;
 
 
@@ -431,16 +431,7 @@ void prueba::on_boton11_clicked()
     }
 
 }
-void prueba::ventanaaci(){
-    if(tiempo<=29){
-        aciertos a(this);
-        a.setModal(true);
-        a.show();
-        a.exec();
-    }
 
-
-}
 
 
 

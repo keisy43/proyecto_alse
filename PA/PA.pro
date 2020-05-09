@@ -31,7 +31,9 @@ SOURCES += \
     menu.cpp \
     prueba.cpp \
     tiempod.cpp \
-    aciertos.cpp
+    aciertos.cpp \
+    db_local.cpp \
+    datosu.cpp
 
 HEADERS += \
         usuario.h \
@@ -40,7 +42,9 @@ HEADERS += \
     menu.h \
     prueba.h \
     tiempod.h \
-    aciertos.h
+    aciertos.h \
+    db_local.h \
+    datosu.h
 
 FORMS += \
         usuario.ui \
@@ -53,3 +57,6 @@ FORMS += \
 
 RESOURCES += \
     resources.qrc
+
+LIBS += \
+        -lsqlite3

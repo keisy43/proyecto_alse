@@ -40,7 +40,7 @@ private slots:
     void on_boton10_clicked();
 
     void on_boton11_clicked();
-    void ventanaaci();
+
 
 
 

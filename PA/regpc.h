@@ -3,6 +3,9 @@
 
 #include <QDialog>
 
+#include <string>
+#include <sqlite3.h>
+
 namespace Ui {
 class regpc;
 }

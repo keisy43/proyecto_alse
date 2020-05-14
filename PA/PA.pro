@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -31,7 +31,10 @@ SOURCES += \
     menu.cpp \
     prueba.cpp \
     tiempod.cpp \
-    aciertos.cpp
+    aciertos.cpp \
+    db_local.cpp \
+    paciente.cpp \
+    veripac.cpp
 
 HEADERS += \
         usuario.h \
@@ -40,7 +43,10 @@ HEADERS += \
     menu.h \
     prueba.h \
     tiempod.h \
-    aciertos.h
+    aciertos.h \
+    db_local.h \
+    paciente.h \
+    veripac.h
 
 FORMS += \
         usuario.ui \
@@ -49,7 +55,12 @@ FORMS += \
     menu.ui \
     prueba.ui \
     tiempod.ui \
-    aciertos.ui
+    aciertos.ui \
+    paciente.ui \
+    veripac.ui
 
 RESOURCES += \
     resources.qrc
+
+LIBS += \
+        -lsqlite3

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
-    <height>381</height>
+    <width>812</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
-     <width>778</width>
+     <y>10</y>
+     <width>761</width>
      <height>271</height>
     </rect>
    </property>
@@ -378,12 +378,12 @@ background-repeat: none;
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>320</y>
-     <width>121</width>
+     <width>191</width>
      <height>27</height>
     </rect>
    </property>
@@ -391,7 +391,7 @@ background-repeat: none;
     <item>
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Tiempo:</string>
+       <string>Tiempo de prueba:</string>
       </property>
      </widget>
     </item>
@@ -400,12 +400,12 @@ background-repeat: none;
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>220</x>
      <y>320</y>
-     <width>131</width>
+     <width>206</width>
      <height>27</height>
     </rect>
    </property>
@@ -413,7 +413,7 @@ background-repeat: none;
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Aciertos:</string>
+       <string>Cantidad de aciertos:</string>
       </property>
      </widget>
     </item>

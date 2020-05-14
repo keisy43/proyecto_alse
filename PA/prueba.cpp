@@ -1,10 +1,12 @@
 #include "prueba.h"
 #include "ui_prueba.h"
 #include "aciertos.h"
+#include "tiempod.h"
 #include <QTimer>
 
 int conteo=0;
 double _nota=0.;
+int _duracion;
 
 prueba::prueba(QWidget *parent) :
     QDialog(parent),
@@ -12,9 +14,7 @@ prueba::prueba(QWidget *parent) :
 {
     ui->setupUi(this);
     _timer = new QTimer(this);
-
     // Primero configuro los leds para que arranque en el estado 1
-
     // Estados :
     // 1- Prende boton 1
     // 2- Prende boton 2
@@ -53,7 +53,7 @@ prueba::prueba(QWidget *parent) :
     ui->boton11->setIcon(*rd );
     _estado = 1;
     ui->cont->setText(QString::number(conteo));
-
+    ui->cont_2->setText(QString::number(tiempo));
 
     connect(_timer, &QTimer::timeout, this, &prueba::cambio_estado );
     _timer->setInterval( 2000 );
@@ -68,7 +68,8 @@ prueba::~prueba()
     delete ui;
 }
 
-void prueba::cambio_estado(){
+
+void prueba::cambio_estado(void){
     if(tiempo<=(_duracion-1)){
         switch ( _estado ) {
         case 1:
@@ -190,6 +191,7 @@ void prueba::cambio_estado(){
             _timer->setInterval( 1000 );
             _timer->start();
 
+
             break;
         case 7:
             _estado2 = 7;
@@ -210,6 +212,7 @@ void prueba::cambio_estado(){
 
             _timer->setInterval( 1000 );
             _timer->start();
+
             break;
         case 8:
             _estado2 = 8;
@@ -276,6 +279,7 @@ void prueba::cambio_estado(){
 
             _timer->setInterval( 1000 );
             _timer->start();
+
 
             break;
         case 11:
@@ -434,8 +438,8 @@ void prueba::on_boton11_clicked()
 
 }
 void prueba::resultados(){
-    double c=5.0,d=30.0;
-    _nota=(c/d)*conteo;
+    double c=5.0;
+    _nota=(c/ (double(_duracion)))*conteo;
     aciertos a(this);
     a.setModal(true);
 
@@ -443,6 +447,8 @@ void prueba::resultados(){
      a.exec();
 
 }
+
+
 
 
 

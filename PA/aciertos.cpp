@@ -2,6 +2,7 @@
 #include "ui_aciertos.h"
 #include "prueba.h"
 
+
 aciertos::aciertos(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::aciertos)
@@ -15,6 +16,9 @@ aciertos::~aciertos()
 {
     delete ui;
 }
+
+
+
 
 
 

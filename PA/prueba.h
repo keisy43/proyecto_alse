@@ -20,7 +20,7 @@ public:
     ~prueba();
 
 private slots:
-    void cambio_estado();
+    void cambio_estado(void );
     void on_boton1_clicked();
     void on_boton2_clicked();
     void on_boton3_clicked();
@@ -33,13 +33,17 @@ private slots:
     void on_boton10_clicked();
     void on_boton11_clicked();
     void resultados();
+
+
+
+
 private:
     Ui::prueba *ui;
     QTimer  *_timer;
     char _estado;
     char _estado2;
-    int tiempo=0;
 
+    int tiempo=0;
 
       QPixmap *rd, *rl;
 };
